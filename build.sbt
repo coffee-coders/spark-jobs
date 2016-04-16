@@ -1,7 +1,12 @@
 name := "spark-jobs"
-
+organization := "unicamp"
 version := "1.0"
 
-scalaVersion := "2.10.5"
+scalaVersion := "2.11.8"
 
-libraryDependencies += "org.apache.spark" %% "spark-core" % "1.6.1"
+libraryDependencies ++= Seq(
+  "org.apache.spark" % "spark-core_2.11" % "1.6.1"
+  , "org.apache.spark" % "spark-mllib_2.11" % "1.6.1"
+  //, "com.github.melrief" % "purecsv" % "0.0.6"
+//  , compilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
+)
