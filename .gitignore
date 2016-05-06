@@ -2,3 +2,6 @@ target/*
 project/target/*
 .idea/*
 *.iml
+output/
+crimes*.csv
+project/project

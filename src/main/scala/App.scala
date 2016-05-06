@@ -10,7 +10,7 @@ object App {
   case class CsvLine(c1: String, tipo: String, c3: String, c4: String, c5: String, c6: String, c7: String, lon: Double, lat: Double)
 
   def main(args: Array[String]) {
-    val fileCsv = "kmeans_1.csv" // Should be some file on your system
+    val fileCsv = "crimes.csv" // Should be some file on your system
     val conf = new SparkConf().setMaster("local[*]").setAppName("MC855 - Spark Jobs")
     val sc = new SparkContext(conf)
     val file = sc.textFile(fileCsv, 2).cache()
